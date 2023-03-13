@@ -1,0 +1,13 @@
+ {
+
+  "item.simplenetheritereforged.raw_netherite": "Raw Netherite",
+
+  "block.simplenetheritereforged.netherrack_netherite_ore": "Netherite Ore",
+  "block.simplenetheritereforged.deepslate_netherite_ore": "Deepslate Netherite Ore",
+  "block.simplenetheritereforged.endstone_netherite_ore": "Endstone Netherite Ore",
+  "block.simplenetheritereforged.stone_netherite_ore": "Stone Netherite Ore",
+  "block.simplenetheritereforged.raw_netherite_block": "Raw Netherite Block",
+
+  "creativemodetab.simplenetherite_tab": "Simple Netherite"
+
+}
