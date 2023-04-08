@@ -1,11 +1,11 @@
 package net.scaredrabbit.simplenetheritereforged.datagen;
 
+import net.scaredrabbit.simplenetheritereforged.block.ModBlocks;
+import net.scaredrabbit.simplenetheritereforged.item.ModItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
-import net.scaredrabbit.simplenetheritereforged.block.ModBlocks;
-import net.scaredrabbit.simplenetheritereforged.item.ModItems;
 
 import java.util.Set;
 

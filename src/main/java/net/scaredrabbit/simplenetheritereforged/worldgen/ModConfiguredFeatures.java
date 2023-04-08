@@ -19,7 +19,7 @@ import net.scaredrabbit.simplenetheritereforged.block.ModBlocks;
 import java.util.List;
 
 public class ModConfiguredFeatures {
-    public static final ResourceKey<ConfiguredFeature<?, ?>> STONE_NETHERITE_ORE_KEY = registerKey("stone_netherite_ore");
+
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_NETHERITE_ORE_KEY = registerKey("deepslate_netherite_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_NETHERITE_ORE_KEY = registerKey("endstone_netherite_ore");
@@ -31,11 +31,11 @@ public class ModConfiguredFeatures {
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
         RuleTest endstoneReplaceables = new BlockMatchTest(Blocks.END_STONE);
 
-        List<OreConfiguration.TargetBlockState> overworldBlackOpalOres = List.of(OreConfiguration.target(stoneReplaceables,
+        List<OreConfiguration.TargetBlockState> overworldNetheriteOres = List.of(OreConfiguration.target(stoneReplaceables,
                         ModBlocks.STONE_NETHERITE_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_NETHERITE_ORE.get().defaultBlockState()));
 
-        register(context, OVERWORLD_NETHERITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldBlackOpalOres, 9));
+        register(context, OVERWORLD_NETHERITE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldNetheriteOres, 9));
         register(context, END_NETHERITE_ORE_KEY, Feature.ORE, new OreConfiguration(endstoneReplaceables,
                 ModBlocks.ENDSTONE_NETHERITE_ORE.get().defaultBlockState(), 9));
         register(context, NETHER_NETHERITE_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,

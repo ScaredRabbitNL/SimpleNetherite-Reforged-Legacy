@@ -16,7 +16,7 @@ plugins {
 apply plugin: 'org.spongepowered.mixin'
 
 group = 'net.scaredrabbit.simplenetheritereforged'
-version = '1.19.3-1.0-44.1.0'
+version = '1.19.3-1.1-44.1.0'
 
 java {
     archivesBaseName = 'simplenetherite-reforged'

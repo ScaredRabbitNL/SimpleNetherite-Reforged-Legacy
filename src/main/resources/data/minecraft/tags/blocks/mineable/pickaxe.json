@@ -1,9 +1,10 @@
 {
   "replace": false,
   "values": [
-    "simplenetheritereforged:netherite_ore",
+    "simplenetheritereforged:netherrack_netherite_ore",
     "simplenetheritereforged:stone_netherite_ore",
     "simplenetheritereforged:deepslate_netherite_ore",
-    "simplenetheritereforged:endstone_netherite_ore"
+    "simplenetheritereforged:endstone_netherite_ore",
+    "simplenetheritereforged:raw_netherite_block"
   ]
 }

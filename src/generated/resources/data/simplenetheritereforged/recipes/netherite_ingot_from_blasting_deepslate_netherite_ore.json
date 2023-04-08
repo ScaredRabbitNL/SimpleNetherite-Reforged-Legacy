@@ -2,9 +2,10 @@
   "type": "minecraft:blasting",
   "category": "misc",
   "cookingtime": 100,
-  "experience": 2.0,
+  "experience": 4.0,
+  "group": "deepslate_netherite_smelting",
   "ingredient": {
-    "item": "simplenetherite:stone_netherite_ore"
+    "item": "simplenetheritereforged:deepslate_netherite_ore"
   },
   "result": "minecraft:netherite_ingot"
 }

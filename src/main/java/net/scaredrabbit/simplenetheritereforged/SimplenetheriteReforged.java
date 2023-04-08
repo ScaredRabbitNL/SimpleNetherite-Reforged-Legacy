@@ -21,6 +21,7 @@ public class SimpleNetheriteReforged {
     public static final String MODID = "simplenetheritereforged";
     private static final Logger LOGGER = LogUtils.getLogger();
     public SimpleNetheriteReforged() {
+
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);

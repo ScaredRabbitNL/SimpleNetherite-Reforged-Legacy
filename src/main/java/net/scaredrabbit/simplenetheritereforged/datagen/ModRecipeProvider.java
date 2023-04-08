@@ -1,20 +1,17 @@
 package net.scaredrabbit.simplenetheritereforged.datagen;
 
-import net.minecraft.client.Minecraft;
+import net.minecraft.world.item.Items;
+import net.scaredrabbit.simplenetheritereforged.SimpleNetheriteReforged;
+import net.scaredrabbit.simplenetheritereforged.block.ModBlocks;
+import net.scaredrabbit.simplenetheritereforged.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-import net.scaredrabbit.simplenetheritereforged.SimpleNetheriteReforged;
-import net.scaredrabbit.simplenetheritereforged.block.ModBlocks;
-import net.scaredrabbit.simplenetheritereforged.item.ModItems;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -28,7 +25,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
         oreSmelting(consumer, List.of(ModItems.RAW_NETHERITE.get()), RecipeCategory.MISC,
-                Items.NETHERITE_INGOT, 0.7f, 200, "netherite_ingot");
+                Items.NETHERITE_INGOT, 2f, 200, "raw_netherite_smelting");
+        oreSmelting(consumer, List.of(ModBlocks.NETHERRACK_NETHERITE_ORE.get()), RecipeCategory.MISC,
+                Items.NETHERITE_INGOT, 2f, 200, "netherrack_netherite_smelting");
+        oreSmelting(consumer, List.of(ModBlocks.DEEPSLATE_NETHERITE_ORE.get()), RecipeCategory.MISC,
+                Items.NETHERITE_INGOT, 2f, 200, "deepslate_netherite_smelting");
+        oreSmelting(consumer, List.of(ModBlocks.ENDSTONE_NETHERITE_ORE.get()), RecipeCategory.MISC,
+                Items.NETHERITE_INGOT, 2f, 200, "endstone_netherite_smelting");
+
+        oreBlasting(consumer, List.of(ModBlocks.NETHERRACK_NETHERITE_ORE.get()), RecipeCategory.MISC,
+                Items.NETHERITE_INGOT, 4f, 100, "netherrack_netherite_smelting");
+        oreBlasting(consumer, List.of(ModBlocks.DEEPSLATE_NETHERITE_ORE.get()), RecipeCategory.MISC,
+                Items.NETHERITE_INGOT, 4f, 100, "deepslate_netherite_smelting");
+        oreBlasting(consumer, List.of(ModBlocks.ENDSTONE_NETHERITE_ORE.get()), RecipeCategory.MISC,
+                Items.NETHERITE_INGOT, 4f, 100, "endstone_netherite_smelting");
+        oreBlasting(consumer, List.of(ModItems.RAW_NETHERITE.get()), RecipeCategory.MISC,
+                Items.NETHERITE_INGOT, 4f, 100, "netherite_blasting");
+
 
         nineBlockStorageRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_NETHERITE.get(), RecipeCategory.MISC,
                 ModBlocks.RAW_NETHERITE_BLOCK.get());
@@ -59,6 +72,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(itemlike), has(itemlike)).save(p_250791_, new ResourceLocation(SimpleNetheriteReforged.MODID, getItemName(p_250066_)) + p_249236_ + "_" + getItemName(itemlike));
         }
     }
+    protected static void oreBlasting(Consumer<FinishedRecipe> p_248775_, List<ItemLike> p_251504_, RecipeCategory p_248846_, ItemLike p_249735_, float p_248783_, int p_250303_, String p_251984_) {
+        oreCooking(p_248775_, RecipeSerializer.BLASTING_RECIPE, p_251504_, p_248846_, p_249735_, p_248783_, p_250303_, p_251984_, "_from_blasting");
+    }
 
     protected static void nineBlockStorageRecipes(Consumer<FinishedRecipe> p_249580_, RecipeCategory p_251203_, ItemLike p_251689_, RecipeCategory p_251376_, ItemLike p_248771_) {
         nineBlockStorageRecipes(p_249580_, p_251203_, p_251689_, p_251376_, p_248771_, getSimpleRecipeName(p_248771_), (String)null, getSimpleRecipeName(p_251689_), (String)null);
@@ -72,4 +88,5 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(p_248977_, p_251911_).define('#', p_250042_).pattern("###").pattern("###").pattern("###").group(p_248641_)
                 .unlockedBy(getHasName(p_250042_), has(p_250042_)).save(p_250423_, new ResourceLocation(SimpleNetheriteReforged.MODID, p_250475_));
     }
+
 }

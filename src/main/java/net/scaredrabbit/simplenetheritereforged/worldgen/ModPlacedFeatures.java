@@ -26,13 +26,13 @@ public class ModPlacedFeatures {
 
         register(context, OVERWORLD_NETHERITE_ORE_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_NETHERITE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(8, // veins per chunk
-                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.aboveBottom(80))));
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(0), VerticalAnchor.absolute(80))));
         register(context, NETHER_NETHERITE_ORE_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_NETHERITE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(4, // veins per chunk
-                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(8), VerticalAnchor.aboveBottom(16))));
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(8), VerticalAnchor.absolute(16))));
         register(context, END_NETHERITE_ORE_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_NETHERITE_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(12, // veins per chunk
-                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.aboveBottom(80))));
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(0), VerticalAnchor.absolute(80))));
     }
 
 
@@ -41,7 +41,7 @@ public class ModPlacedFeatures {
     }
 
     private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
-                                 List<PlacementModifier> modifiers) {
+                              List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }
 

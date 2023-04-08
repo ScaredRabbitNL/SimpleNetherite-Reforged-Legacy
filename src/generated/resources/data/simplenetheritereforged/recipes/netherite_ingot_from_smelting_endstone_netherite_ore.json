@@ -3,9 +3,9 @@
   "category": "misc",
   "cookingtime": 200,
   "experience": 2.0,
-  "group": "raw_netherite_smelting",
+  "group": "endstone_netherite_smelting",
   "ingredient": {
-    "item": "simplenetheritereforged:raw_netherite"
+    "item": "simplenetheritereforged:endstone_netherite_ore"
   },
   "result": "minecraft:netherite_ingot"
 }

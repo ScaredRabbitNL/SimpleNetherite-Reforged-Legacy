@@ -1,5 +1,6 @@
 package net.scaredrabbit.simplenetheritereforged.datagen;
 
+
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
