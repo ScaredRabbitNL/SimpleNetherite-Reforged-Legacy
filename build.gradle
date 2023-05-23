@@ -14,6 +14,7 @@ plugins {
 }
 
 apply plugin: 'org.spongepowered.mixin'
+apply plugin: 'maven-publish'
 
 group = 'net.scaredrabbit.simplenetheritereforged'
 version = '1.19.3-1.1-44.1.0'
