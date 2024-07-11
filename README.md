@@ -1,9 +1,6 @@
 # Simple Netherite Reforged
 
-[![](https://github.com/ScaredRabbitYT/Images/blob/patch-1/Simple%20Netherite/Simple%20Netherite%20Forge/Downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/simple-netherite-forge)
-[![](https://github.com/ScaredRabbitYT/Images/blob/patch-1/Simple%20Netherite/Simple%20Netherite%20Forge/Versions.svg)](https://www.curseforge.com/minecraft/mc-mods/simple-netherite-forge)  
-
-[![](https://jitpack.io/v/ScaredRabbitYT/SimpleNetherite-Reforged.svg)](https://jitpack.io/#ScaredRabbitYT/SimpleNetherite-Reforged) 
+⚠️ This repository is not longer maintained in favour of a merge with multiloader ⚠️
 
 
 ### Information
