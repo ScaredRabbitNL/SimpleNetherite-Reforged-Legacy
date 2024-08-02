@@ -1,7 +1,7 @@
 # SimpleNetherite-Reforged (Legacy)
 
 ## ⚠️ This repository is not longer maintained in favour of a merge with multiloader ⚠️
-## Visit the new repository at [https://github.com/ScaredRabbitYT/SimpleNetherite](https://github.com/ScaredRabbitYT/SimpleNetherite)
+## Visit the new repository at [https://github.com/ScaredRabbitNL/ReworkedNetherite](https://github.com/ScaredRabbitNL/ReworkedNetherite)
 
 
 ### Information
